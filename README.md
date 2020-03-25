@@ -1,2 +1,2 @@
 # Alteryx-Workflow-Template
- Automatically creates a template for an Alteryx project
+ An Alteryx app that automatically creates a template for an Alteryx project
