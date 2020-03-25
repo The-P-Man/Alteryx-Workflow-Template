@@ -1,0 +1,1157 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.1">
+  <Nodes>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="510" y="318" width="168" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Logo</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="224" g="224" b="224" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1758" y="534" width="168" height="384" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Output yxmd</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="174" g="255" b="174" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="390" y="534" width="1092" height="384" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Edit the XML</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="149" g="202" b="255" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="210" y="534" width="144" height="384" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Initialise workflow</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="174" g="255" b="174" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1386" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="New Workflow XML" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Keep only XML</AnnotationText>
+          <DefaultAnnotationText>Keep only XML</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1818" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">.\Name.yxmd</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>\0</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>False</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>WorkflowOutput</Name>
+          <DefaultAnnotationText>Name.yxmd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="1818" y="570" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="1164" height="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Create New Alteryx Workflow</Text>
+          <Font name="Segoe UI" size="48" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="198" width="1056" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Workflow built by: Ian Baldwin
+Updated by: Philip Mannering
+]]></Text>
+          <Font name="Segoe UI" size="15.75" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="150" width="1164" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>This app allows people to create a new workflow in template style from scratch</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1314" y="318" width="168" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Project Location</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="224" g="224" b="224" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FolderBrowse.FolderBrowse">
+        <Position x="1362" y="342" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name>FolderName</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="714" y="318" width="156" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Project Name</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="224" g="224" b="224" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="762" y="342" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name>ProjectName</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="246" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\Philip\Documents\GitHub\Ians-Alteryx-Macros\New Workflow From Template\Template.yxmd</File>
+          <FormatSpecificOptions>
+            <CodePage>28591</CodePage>
+            <Delimeter>\0</Delimeter>
+            <IgnoreErrors>False</IgnoreErrors>
+            <FieldLen>9999999999999999999</FieldLen>
+            <AllowShareWrite>False</AllowShareWrite>
+            <HeaderRow>False</HeaderRow>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Template.yxmd</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="2147483647" source="File: C:\Users\Philip\Documents\GitHub\Ians-Alteryx-Macros\New Workflow From Template\Template.yxmd" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="438" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Field_1" action="Concat" rename="New Workflow XML">
+              <Concat_Start />
+              <Separator>\n</Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Summarize: Concat - Field_1" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1014" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([New Workflow XML], &quot;_name_&quot;, &quot;%Question.ProjectName%&quot;)" field="New Workflow XML" size="2147483647" type="V_String" />
+            <FormulaField expression="Replace([New Workflow XML], &quot;_description_&quot;, &quot;%Question.ProjectDescription%&quot;)&#xA;" field="New Workflow XML" size="2147483647" type="V_String" />
+            <FormulaField expression="if isempty('%Question.Author%')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '%Question.Author%' endif" field="Author" size="1073741823" type="V_WString" />
+            <FormulaField expression="Replace([New Workflow XML], '_author_', [Author])&#xA;" field="New Workflow XML" size="2147483647" type="V_String" />
+            <FormulaField expression="replace([New Workflow XML], '_date_', todate(datetimestart()))" field="New Workflow XML" size="2147483647" type="V_String" />
+            <FormulaField expression="if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" field="New Workflow XML" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Edit XML</AnnotationText>
+          <DefaultAnnotationText>New Workflow XML = Replace([New Workflow XML], "_name_", "%Question.ProjectName%...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="Author" size="1073741823" source="Formula: if isempty('')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '' endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlobInput.BlobInput">
+        <Position x="678" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FileName />
+          <ModifyMethod>Path</ModifyMethod>
+          <ModifyFilename_Field>filepath</ModifyFilename_Field>
+          <ModifyFilename_StopOnError value="False" />
+          <SplitBlobs value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="filepath" size="10" source="TextInput:" type="String" />
+            <Field name="Blob" size="2147483647" source="BlobInput: " type="Blob" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobInput" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlobConvert.BlobConvert">
+        <Position x="762" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ToBlob value="False" />
+          <from_Field>Blob</from_Field>
+          <from_Mode>Base64</from_Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="filepath" size="10" source="TextInput:" type="String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlobConvert" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="906" y="318" width="168" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Project Description</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="224" g="224" b="224" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="954" y="342" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name>ProjectDescription</Name>
+          <DefaultAnnotationText>Text Box (36)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1110" y="318" width="168" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Author</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="224" g="224" b="224" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="1158" y="342" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name>Author</Name>
+          <DefaultAnnotationText>Text Box (38)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="594" y="618" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
+        <Position x="570" y="342" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText>File Browse (41)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="594" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="filepath" />
+          </Fields>
+          <Data>
+            <r>
+              <c>_filepath_</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="filepath" size="10" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="882" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_filepath" selected="False" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Summarize: Concat - Field_1" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="2010" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="folders" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Inputs</c>
+            </r>
+            <r>
+              <c>Outputs</c>
+            </r>
+            <r>
+              <c>Macros</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="folders" size="7" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2094" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="FileAddPaths('%Question.ProjectName%', [folders])&#xA;&#xA;/* &#xA;If IsEmpty('%Question.ProjectName%')&#xA;then FileAddPaths('New Project', [folders])&#xA;else FileAddPaths('%Question.ProjectName%', [folders])&#xA;endif // ProjectName should never be empty (unless run in Designer)&#xA;*/" field="directory" size="1073741823" type="V_WString" />
+            <FormulaField expression="if IsEmpty('%Question.FolderName%')&#xA;then FileAddPaths([Engine.WorkflowDirectory], [directory])&#xA;else FileAddPaths('%Question.FolderName%', [directory])&#xA;endif&#xA;" field="directory" size="1073741823" type="V_WString" />
+            <FormulaField expression="if FileExists([directory])&#xA;then &#xA;&quot;rem filepath exists&quot; &#xA;else&#xA;&quot;powershell New-Item&quot;              // Create new item&#xA;+ &quot; -ItemType Directory&quot;           // New item is folder&#xA;+ &quot; -Path '&quot; + [directory] + &quot;'&quot;    // Location of folder&#xA;+ &quot; -ErrorAction Ignore&quot;           // Ignore if folder exists&#xA;endif" field="cmd" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create filepath
+Create cmd</AnnotationText>
+          <DefaultAnnotationText>directory = FileAddPaths('%Question.ProjectName%', [folders])
+
+/* 
+If IsEmpty('%...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="folders" size="7" source="TextInput:" type="String" />
+            <Field name="directory" size="1073741823" source="Formula: if IsEmpty('')&#xA;then FileAddPaths([Engine.WorkflowDirectory], [directory])&#xA;else FileAddPaths('', [directory])&#xA;endif&#xA;" type="V_WString" />
+            <Field name="cmd" size="1073741823" source="Formula: if FileExists([directory])&#xA;then &#xA;&quot;rem filepath exists&quot; &#xA;else&#xA;&quot;powershell New-Item&quot;              // Create new item&#xA;+ &quot; -ItemType Directory&quot;           // New item is folder&#xA;+ &quot; -Path '&quot; + [directory] + &quot;'&quot;    // Location of folder&#xA;+ &quot; -ErrorAction Ignore&quot;           // Ignore if folder exists&#xA;endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
+        <Position x="2274" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OutputConfiguration>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">script.bat</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>Never</ForceQuotes>
+                <HeaderRow>False</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+          </OutputConfiguration>
+          <InputConfiguration>
+            <Configuration />
+          </InputConfiguration>
+          <ProgramName>script.bat</ProgramName>
+          <Arguments />
+          <WorkingDir />
+          <RunMinimized value="False" />
+          <RunSilent value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Run script.bat</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2190" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="cmd" selected="True" />
+            <SelectField field="folders" selected="False" />
+            <SelectField field="filepath" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="cmd" size="1073741823" source="Formula: if FileExists([directory])&#xA;then &#xA;&quot;rem filepath exists&quot; &#xA;else&#xA;&quot;powershell New-Item&quot;              // Create new item&#xA;+ &quot; -ItemType Directory&quot;           // New item is folder&#xA;+ &quot; -Path '&quot; + [directory] + &quot;'&quot;    // Location of folder&#xA;+ &quot; -ErrorAction Ignore&quot;           // Ignore if folder exists&#xA;endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1518" y="318" width="168" height="180" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Add Folder Structure</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor r="224" g="224" b="224" />
+          <Shape shape="0" />
+          <Justification Justification="7" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1530" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if IsEmpty('%Question.FolderName%')&#xA;then FileAddPaths([Engine.WorkflowDirectory], '%Question.ProjectName%')&#xA;else FileAddPaths('%Question.FolderName%', '%Question.ProjectName%')&#xA;endif&#xA;" field="directory" size="1073741823" type="V_WString" />
+            <FormulaField expression="if FileExists([directory])&#xA;then &quot;rem filepath exists&quot; &#xA;else&#xA;&quot;powershell New-Item&quot;              // Create new item&#xA;+ &quot; -ItemType Directory&quot;           // New item is folder&#xA;+ &quot; -Path '&quot; + [directory] + &quot;'&quot;   // Location of folder&#xA;+ &quot; -ErrorAction Ignore&quot;           // Ignore if folder exists&#xA;endif" field="cmd" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>directory = if IsEmpty('%Question.FolderName%')
+then FileAddPaths([Engine.Workfl...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="Author" size="1073741823" source="Formula: if isempty('')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '' endif" type="V_WString" />
+            <Field name="folders" size="7" source="TextInput:" type="String" />
+            <Field name="directory" size="1073741823" source="Formula: if IsEmpty('')&#xA;then FileAddPaths([Engine.WorkflowDirectory], '')&#xA;else FileAddPaths('', '')&#xA;endif&#xA;" type="V_WString" />
+            <Field name="cmd" size="1073741823" source="Formula: if FileExists([directory])&#xA;then &quot;rem filepath exists&quot; &#xA;else&#xA;&quot;powershell New-Item&quot;              // Create new item&#xA;+ &quot; -ItemType Directory&quot;           // New item is folder&#xA;+ &quot; -Path '&quot; + [directory] + &quot;'&quot;   // Location of folder&#xA;+ &quot; -ErrorAction Ignore&quot;           // Ignore if folder exists&#xA;endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="1110" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="Author" size="1073741823" source="Formula: if isempty('')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '' endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output2">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="Author" size="1073741823" source="Formula: if isempty('')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '' endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output3">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="Author" size="1073741823" source="Formula: if isempty('')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '' endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1614" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Blob" selected="True" />
+            <SelectField field="directory" selected="True" />
+            <SelectField field="cmd" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="directory" size="1073741823" source="Formula: if IsEmpty('')&#xA;then FileAddPaths([Engine.WorkflowDirectory], '')&#xA;else FileAddPaths('', '')&#xA;endif&#xA;" type="V_WString" />
+            <Field name="cmd" size="1073741823" source="Formula: if FileExists([directory])&#xA;then &quot;rem filepath exists&quot; &#xA;else&#xA;&quot;powershell New-Item&quot;              // Create new item&#xA;+ &quot; -ItemType Directory&quot;           // New item is folder&#xA;+ &quot; -Path '&quot; + [directory] + &quot;'&quot;   // Location of folder&#xA;+ &quot; -ErrorAction Ignore&quot;           // Ignore if folder exists&#xA;endif" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1290" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="3" />
+          <Fields>
+            <Field name="folders" />
+          </Fields>
+          <Data>
+            <r>
+              <c>Inputs</c>
+            </r>
+            <r>
+              <c>Outputs</c>
+            </r>
+            <r>
+              <c>Macros</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="folders" size="7" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1398" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="New Workflow XML" size="2147483647" source="Formula: if not isempty([Blob])&#xA;then regex_replace([New Workflow XML], '(?&lt;=&lt;BG_Image&gt;).*(?=&lt;/BG_Image&gt;)', [Blob])&#xA;else [New Workflow XML] endif&#xA;" type="V_String" />
+            <Field name="Blob" size="2147483647" source="BlobConvert: Base64" type="V_String" />
+            <Field name="Author" size="1073741823" source="Formula: if isempty('')&#xA;then REGEX_Replace([Engine.WorkflowDirectory], '.*Users\\([^\\]+).*', '\1')&#xA;else '' endif" type="V_WString" />
+            <Field name="folders" size="7" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="8" Connection="Action" />
+      <Destination ToolID="5" Connection="Action" />
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="7" Connection="Question" />
+      <Destination ToolID="8" Connection="Question" />
+    </Connection>
+    <Connection name="#2" Wireless="True">
+      <Origin ToolID="9" Connection="Question" />
+      <Destination ToolID="8" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="48" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="48" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="40" Connection="Action" />
+      <Destination ToolID="46" Connection="Action" />
+    </Connection>
+    <Connection name="#1" Wireless="True">
+      <Origin ToolID="41" Connection="Question" />
+      <Destination ToolID="40" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output2" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="58" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="58" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>FolderName</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ProjectName</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>ProjectDescription</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Author</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>File Browse (41)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Alteryx Workflow Template</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValueFormula</Type>
+              <Description />
+              <ToolId value="8" />
+              <Expression>FileAddPaths([#1], [#2]) + ".yxmd"</Expression>
+              <Destination>5/File</Destination>
+              <Mode>Expression</Mode>
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="40" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>46/Data/r/c</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (6)</Name>
+          <ToolId value="6" />
+          <Questions>
+            <Question>
+              <Type>FolderBrowse</Type>
+              <Description>Choose where to create your data project:</Description>
+              <Name>FolderName</Name>
+              <ToolId value="7" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Project Name</Description>
+              <Name>ProjectName</Name>
+              <ToolId value="9" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Project Description</Description>
+              <Name>ProjectDescription</Name>
+              <ToolId value="36" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="True" />
+              <Hidden value="False" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Author (optional)</Description>
+              <Name>Author</Name>
+              <ToolId value="38" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+            <Question>
+              <Type>FileBrowse</Type>
+              <Description>Select Image (optional)</Description>
+              <Name>File Browse (41)</Name>
+              <ToolId value="41" />
+              <SaveAs value="False" />
+              <Mode>FileSpec</Mode>
+              <FileSpec>Image Files (*.png)|*.png|Image Files (*.jpg)|*.jpg|All Files (*.*)|*.*</FileSpec>
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="True">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</Wiz_CustomGraphic>
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="5" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage>Workflow Template Created</Wiz_OutputMessage>
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
